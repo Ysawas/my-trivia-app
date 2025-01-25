@@ -1,3 +1,64 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    /* Use a space-themed background image */
+    background-image: url('https://source.unsplash.com/random?stars,galaxy'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    color: #e0e0e0; /* Off-white text color */
+  }
+  
+  .question-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border: 2px solid #007bff; /* Blue border */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .answer-button {
+    @apply py-4 px-6 rounded-lg font-medium text-lg;
+    background-color: #28a745; /* Green background for answer buttons */
+    color: #fff;
+    border: none;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .answer-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .answer-button.selected {
+    background-color: #dc3545; /* Red for selected answer */
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    margin-bottom: 1rem;
+  }
+  
+  .dark-background {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    backdrop-filter: blur(10px); /* Add blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Make the form take full viewport height */
+  }
